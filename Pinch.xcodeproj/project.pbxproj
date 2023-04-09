@@ -12,6 +12,7 @@
 		3D8F9D5429E261E6005A80BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F9D5329E261E6005A80BC /* Assets.xcassets */; };
 		3D8F9D5729E261E6005A80BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F9D5629E261E6005A80BC /* Preview Assets.xcassets */; };
 		3D8F9D6229E27B44005A80BC /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F9D6129E27B43005A80BC /* InfoPanelView.swift */; };
+		FD94E37829E2F98F00DBD777 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94E37729E2F98F00DBD777 /* ControlImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3D8F9D5329E261E6005A80BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8F9D5629E261E6005A80BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D8F9D6129E27B43005A80BC /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
+		FD94E37729E2F98F00DBD777 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,6 @@
 		3D8F9D4E29E261E4005A80BC /* Pinch */ = {
 			isa = PBXGroup;
 			children = (
-				3D8F9D6029E26363005A80BC /* Model */,
-				3D8F9D5F29E2634F005A80BC /* Data */,
 				3D8F9D5E29E26344005A80BC /* Views */,
 				3D8F9D4F29E261E4005A80BC /* PinchApp.swift */,
 				3D8F9D5D29E2632E005A80BC /* Screens */,
@@ -84,22 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				3D8F9D6129E27B43005A80BC /* InfoPanelView.swift */,
+				FD94E37729E2F98F00DBD777 /* ControlImageView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3D8F9D5F29E2634F005A80BC /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		3D8F9D6029E26363005A80BC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD94E37829E2F98F00DBD777 /* ControlImageView.swift in Sources */,
 				3D8F9D5229E261E4005A80BC /* ContentView.swift in Sources */,
 				3D8F9D5029E261E4005A80BC /* PinchApp.swift in Sources */,
 				3D8F9D6229E27B44005A80BC /* InfoPanelView.swift in Sources */,
