@@ -22,6 +22,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Color.clear // adds an extra space on the top of the zstack
                 //MARK: - Page Image
                 Image("magazine-front-cover")
                     .resizable()
@@ -47,7 +48,7 @@ struct ContentView: View {
                             resetImageState()
                         }
                     })
-                //MARK: - 2. Drag gesture
+                //MARK: - 2. Drag Gesture
                     .gesture(
                         DragGesture()
                             .onChanged({ geture in
@@ -65,12 +66,18 @@ struct ContentView: View {
             }
             .navigationTitle("Pinch & Zoom")
             .navigationBarTitleDisplayMode(.inline)
-        }.navigationViewStyle(.stack)
             .onAppear {
                 withAnimation(.linear(duration: 1)){
                     isAnimating = true
                 }
             }
+            //MARK: - Info Panel View
+            .overlay(InfoPanelView(scale: imageScale, offset: imageOffset)
+                .padding(.horizontal)
+                .padding(.top, 30)
+                     , alignment: .top)
+        }
+        .navigationViewStyle(.stack)
     }
 }
 
