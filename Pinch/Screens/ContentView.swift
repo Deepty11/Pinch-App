@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
     @State private var imageOffset: CGSize = .zero // height and width are both zero
+    @State private var isDrawerOpen: Bool = false
     
     func resetImageState() {
         return withAnimation(.spring()) {
@@ -146,6 +147,37 @@ struct ContentView: View {
                     .padding(.bottom, 30)
                 , alignment: .bottom
             )
+            .overlay(
+                HStack{
+                    //MARK: - Drawer Handle
+                    Image(systemName:  isDrawerOpen ? "chevron.right" : "chevron.left")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(8)
+                        .foregroundStyle(.secondary)
+                        .onTapGesture {
+                            withAnimation(.easeOut) {
+                                isDrawerOpen.toggle()
+                            }
+                        }
+                    //MARK: - Thumbnails
+                    Spacer()
+                }
+                    .padding(EdgeInsets(top: 16,
+                                        leading: 8,
+                                        bottom: 16,
+                                        trailing: 8))
+                    .frame(width: 260)
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .padding(.top, UIScreen.main.bounds.height / 12)
+                    .offset(x: isDrawerOpen ? 20 : 215)
+                    .opacity(isAnimating ? 1 : 0)
+                
+                , alignment: .topTrailing
+            )
+        
             
             
         }
